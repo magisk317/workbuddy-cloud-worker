@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import android.util.Log;
 

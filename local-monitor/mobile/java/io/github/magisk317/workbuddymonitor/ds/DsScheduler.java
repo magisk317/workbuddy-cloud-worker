@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import android.app.AlarmManager;
 import android.app.PendingIntent;

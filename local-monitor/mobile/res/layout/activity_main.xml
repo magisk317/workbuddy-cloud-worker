@@ -150,7 +150,7 @@
                 <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:text="近 7 天使用趋势" android:textColor="@color/text" android:textSize="15sp"
                     android:textStyle="bold" android:fontFamily="sans-serif-medium" />
-                <io.github.workbuddymonitor.MiniChart android:id="@+id/chart7d" android:layout_width="match_parent"
+                <io.github.magisk317.workbuddymonitor.MiniChart android:id="@+id/chart7d" android:layout_width="match_parent"
                     android:layout_height="58dp" android:layout_marginTop="10dp" />
                 <View android:layout_width="match_parent" android:layout_height="1dp"
                     android:layout_marginTop="16dp" android:layout_marginBottom="16dp" android:background="@color/divider" />

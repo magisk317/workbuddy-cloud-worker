@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -42,7 +42,7 @@ public class MainActivity extends Activity {
     private static final String MASK = "\u2022\u2022\u2022";
 
     /** 供外部（DeepSeek 小组件 / 通知）指定进来后打开哪个 Tab。3 = DeepSeek。 */
-    public static final String EXTRA_OPEN_TAB = "io.github.workbuddymonitor.OPEN_TAB";
+    public static final String EXTRA_OPEN_TAB = "io.github.magisk317.workbuddymonitor.OPEN_TAB";
     public static final int TAB_DEEPSEEK = 3;
 
     private View dotStatus;
@@ -59,7 +59,7 @@ public class MainActivity extends Activity {
     /** 切到 DeepSeek 页时要收起的 WorkBuddy 区块（状态行 / 余额大卡 / 页脚） */
     private View headWb, heroWb;
     /** DeepSeek 余额页控制器：另一套数据、另一条刷新链，与 WorkBuddy 积分互不干扰 */
-    private io.github.workbuddymonitor.ds.DsPage dsPage;
+    private io.github.magisk317.workbuddymonitor.ds.DsPage dsPage;
     private ImageButton btnRefresh, btnSettings, btnPrivacy;
     private ScrollView mainScroll;
 
@@ -138,7 +138,7 @@ public class MainActivity extends Activity {
         heroWb = findViewById(R.id.heroWb);
         mainScroll = findViewById(R.id.mainScroll);
 
-        dsPage = new io.github.workbuddymonitor.ds.DsPage(this);
+        dsPage = new io.github.magisk317.workbuddymonitor.ds.DsPage(this);
         dsPage.bind(pageDeepSeek);
         // 概览页里也放一张 DeepSeek 摘要卡，点它跳到 DeepSeek 页
         dsPage.bindOverview(findViewById(R.id.dsOvCard), new Runnable() {
@@ -234,7 +234,7 @@ public class MainActivity extends Activity {
         // DeepSeek 那条刷新链同理必须自愈：am force-stop / 系统清理会把闹钟一起清掉，
         // 只在设置里排一次程的话，采样会永久停摆（与宿主同一类历史事故）。
         try {
-            io.github.workbuddymonitor.ds.DsScheduler.schedule(this);
+            io.github.magisk317.workbuddymonitor.ds.DsScheduler.schedule(this);
         } catch (Throwable ignore) {
         }
     }

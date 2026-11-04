@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

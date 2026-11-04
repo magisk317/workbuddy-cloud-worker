@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import android.content.Context;
  * DeepSeek 子系统的小工具。
  *
  * 说明：DeepSeek 不再有独立的小组件 —— 按要求，只在**原有 WorkBuddy 小组件**底部
- * 多加一行「DeepSeek 余额 · 今日消耗」，由 io.github.workbuddymonitor.WbWidget#setDeepSeekLine 渲染。
+ * 多加一行「DeepSeek 余额 · 今日消耗」，由 io.github.magisk317.workbuddymonitor.WbWidget#setDeepSeekLine 渲染。
  * 所以这里只保留共用的过期判定与时间格式化。
  */
 public final class DsWidgets {

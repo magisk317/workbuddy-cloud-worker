@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import android.content.Context;
 
@@ -41,7 +41,7 @@ public final class DsRefreshTask {
                 DsScheduler.schedule(app, p.getIntervalMin());
                 // 只重绘、不联网：把 WorkBuddy 小组件底部那行 DeepSeek 余额立刻刷新
                 try {
-                    io.github.workbuddymonitor.WbWidget.renderAllFromCache(app);
+                    io.github.magisk317.workbuddymonitor.WbWidget.renderAllFromCache(app);
                 } catch (Throwable ignored) {
                 }
                 if (cb != null) cb.done(ok, r.error, st);

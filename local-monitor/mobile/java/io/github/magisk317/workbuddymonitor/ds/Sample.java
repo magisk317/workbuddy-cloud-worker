@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.Locale;
 /**
  * 一次 DeepSeek 余额采样。
  *
- * 说明：本包（io.github.workbuddymonitor.ds）是「DeepSeek 余额」子系统，
+ * 说明：本包（io.github.magisk317.workbuddymonitor.ds）是「DeepSeek 余额」子系统，
  * 与宿主 WorkBuddy 积分体系完全隔离：独立的偏好存储、独立的采样文件、
  * 独立的闹钟与通知渠道。两者金额互不引用、互不覆盖。
  */

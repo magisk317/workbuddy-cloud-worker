@@ -12,7 +12,7 @@ import socket
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LOCAL_CONFIG_JAVA = os.path.join(
-    ROOT, "mobile", "java", "io", "github", "workbuddymonitor", "LocalConfig.java")
+    ROOT, "mobile", "java", "io", "github", "magisk317", "workbuddymonitor", "LocalConfig.java")
 CONFIG = os.path.join(ROOT, "config.local.json")
 
 
@@ -42,6 +42,7 @@ def main():
     lan.add_argument("--lan-ip", help="computer LAN IPv4; auto-detected when omitted")
     lan.add_argument("--no-auto-lan", action="store_true",
                      help="leave the APK LAN address empty (for generic public builds)")
+    lan.add_argument("--lan-url", help="full bridge URL override, e.g. https://app.usdt.edu.kg (skips auto-detect)")
     parser.add_argument("--port", type=int, default=8791)
     parser.add_argument("--mqtt-host", default="broker.emqx.io")
     parser.add_argument("--mqtt-port", type=int, default=1883)
@@ -55,8 +56,13 @@ def main():
     args = parser.parse_args()
 
     existing = load_existing()
-    ip = "" if args.no_auto_lan else (args.lan_ip or detect_lan_ip())
-    lan_url = "http://%s:%d" % (ip, args.port) if ip else ""
+    if args.lan_url:
+        lan_url = args.lan_url
+    elif args.no_auto_lan:
+        lan_url = ""
+    else:
+        ip = args.lan_ip or detect_lan_ip()
+        lan_url = "http://%s:%d" % (ip, args.port) if ip else ""
     if args.enable_public_mqtt:
         topic = existing.get("mqttTopic") or "wbmon/" + secrets.token_hex(20)
     elif args.disable_mqtt:
@@ -75,7 +81,7 @@ def main():
     with open(CONFIG, "w", encoding="utf-8") as f:
         json.dump(config, f, ensure_ascii=False, indent=2)
 
-    java = """package io.github.workbuddymonitor;
+    java = """package io.github.magisk317.workbuddymonitor;
 
 /** Generated locally by scripts/configure.py. Never commit this file. */
 final class LocalConfig {

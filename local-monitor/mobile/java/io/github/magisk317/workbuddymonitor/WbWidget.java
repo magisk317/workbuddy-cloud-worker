@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import android.app.PendingIntent;
 import android.appwidget.AppWidgetManager;
@@ -15,7 +15,7 @@ import java.util.List;
 
 public class WbWidget extends AppWidgetProvider {
 
-    static final String ACTION_CLICK = "io.github.workbuddymonitor.CLICK";
+    static final String ACTION_CLICK = "io.github.magisk317.workbuddymonitor.CLICK";
 
     // 纯透明小组件的浅色文字板（与 colors.xml 的 w* 色一致）：
     // 白/浅灰文字 + 深色光晕（布局里 shadowColor），深浅壁纸都可读。
@@ -259,8 +259,8 @@ public class WbWidget extends AppWidgetProvider {
      */
     private static void setDeepSeekLine(Context c, RemoteViews rv) {
         try {
-            io.github.workbuddymonitor.ds.Stats st = io.github.workbuddymonitor.ds.DsRefreshTask.cached(c);
-            io.github.workbuddymonitor.ds.DsPrefs p = new io.github.workbuddymonitor.ds.DsPrefs(c);
+            io.github.magisk317.workbuddymonitor.ds.Stats st = io.github.magisk317.workbuddymonitor.ds.DsRefreshTask.cached(c);
+            io.github.magisk317.workbuddymonitor.ds.DsPrefs p = new io.github.magisk317.workbuddymonitor.ds.DsPrefs(c);
             if (!st.hasKey) {
                 rv.setTextViewText(R.id.wDeepSeek, "DeepSeek 未配置 API Key");
                 rv.setTextColor(R.id.wDeepSeek, C_FAINT);
@@ -268,7 +268,7 @@ public class WbWidget extends AppWidgetProvider {
                 rv.setTextViewText(R.id.wDeepSeek, "DeepSeek 等待首次采样");
                 rv.setTextColor(R.id.wDeepSeek, C_WARN);
             } else {
-                boolean stale = io.github.workbuddymonitor.ds.DsWidgets.isStale(c, st, p);
+                boolean stale = io.github.magisk317.workbuddymonitor.ds.DsWidgets.isStale(c, st, p);
                 String sym = st.currencySymbol();
                 if (stale) {
                     // 过期数据绝不冒充实时值

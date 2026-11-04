@@ -204,7 +204,7 @@
                 android:textSize="12sp" />
         </LinearLayout>
 
-        <io.github.workbuddymonitor.ds.DsBarChartView
+        <io.github.magisk317.workbuddymonitor.ds.DsBarChartView
             android:id="@+id/dsChart7"
             android:layout_width="match_parent"
             android:layout_height="96dp"
@@ -246,7 +246,7 @@
                 android:textSize="11sp" />
         </LinearLayout>
 
-        <io.github.workbuddymonitor.ds.DsSparkView
+        <io.github.magisk317.workbuddymonitor.ds.DsSparkView
             android:id="@+id/dsSpark"
             android:layout_width="match_parent"
             android:layout_height="78dp"

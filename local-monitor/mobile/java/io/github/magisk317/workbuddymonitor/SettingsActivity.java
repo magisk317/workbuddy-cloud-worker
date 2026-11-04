@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -16,13 +16,13 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import io.github.workbuddymonitor.ds.DsNotifier;
-import io.github.workbuddymonitor.ds.DsPrefs;
-import io.github.workbuddymonitor.ds.DsRefreshTask;
-import io.github.workbuddymonitor.ds.DsScheduler;
-import io.github.workbuddymonitor.ds.DsStore;
-import io.github.workbuddymonitor.ds.DsWidgets;
-import io.github.workbuddymonitor.ds.Stats;
+import io.github.magisk317.workbuddymonitor.ds.DsNotifier;
+import io.github.magisk317.workbuddymonitor.ds.DsPrefs;
+import io.github.magisk317.workbuddymonitor.ds.DsRefreshTask;
+import io.github.magisk317.workbuddymonitor.ds.DsScheduler;
+import io.github.magisk317.workbuddymonitor.ds.DsStore;
+import io.github.magisk317.workbuddymonitor.ds.DsWidgets;
+import io.github.magisk317.workbuddymonitor.ds.Stats;
 
 /**
  * 设置页。
@@ -337,7 +337,7 @@ public class SettingsActivity extends Activity {
 
     static PendingIntent pi(Context c) {
         Intent i = new Intent(c, TickReceiver.class);
-        i.setAction("io.github.workbuddymonitor.TICK");
+        i.setAction("io.github.magisk317.workbuddymonitor.TICK");
         int flags = PendingIntent.FLAG_UPDATE_CURRENT;
         if (Build.VERSION.SDK_INT >= 23) flags |= PendingIntent.FLAG_IMMUTABLE;
         return PendingIntent.getBroadcast(c, 1001, i, flags);

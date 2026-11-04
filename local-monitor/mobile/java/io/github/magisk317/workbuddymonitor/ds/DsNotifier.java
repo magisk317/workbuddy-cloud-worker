@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import android.app.Notification;
 import android.app.NotificationChannel;
@@ -8,8 +8,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 
-import io.github.workbuddymonitor.MainActivity;
-import io.github.workbuddymonitor.R;
+import io.github.magisk317.workbuddymonitor.MainActivity;
+import io.github.magisk317.workbuddymonitor.R;
 
 /**
  * DeepSeek 余额预警通知。跌破阈值提醒一次，回升后重新武装，避免反复骚扰。

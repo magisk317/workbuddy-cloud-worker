@@ -1,12 +1,12 @@
-package io.github.workbuddymonitor;
+package io.github.magisk317.workbuddymonitor;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
-import io.github.workbuddymonitor.ds.DsRefreshTask;
-import io.github.workbuddymonitor.ds.DsScheduler;
-import io.github.workbuddymonitor.ds.DsWidgets;
+import io.github.magisk317.workbuddymonitor.ds.DsRefreshTask;
+import io.github.magisk317.workbuddymonitor.ds.DsScheduler;
+import io.github.magisk317.workbuddymonitor.ds.DsWidgets;
 
 public class BootReceiver extends BroadcastReceiver {
     public void onReceive(Context c, Intent i) {

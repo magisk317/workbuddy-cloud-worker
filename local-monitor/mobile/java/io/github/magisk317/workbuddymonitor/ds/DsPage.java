@@ -1,4 +1,4 @@
-package io.github.workbuddymonitor.ds;
+package io.github.magisk317.workbuddymonitor.ds;
 
 import android.app.Activity;
 import android.view.LayoutInflater;
@@ -13,8 +13,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-import io.github.workbuddymonitor.R;
-import io.github.workbuddymonitor.Store;
+import io.github.magisk317.workbuddymonitor.R;
+import io.github.magisk317.workbuddymonitor.Store;
 
 /**
  * 主界面第 4 个 Tab「DeepSeek」的控制器。
@@ -121,7 +121,7 @@ public final class DsPage {
                     public void run() {
                         fetching = false;
                         render(st);
-                        io.github.workbuddymonitor.WbWidget.renderAllFromCache(a);
+                        io.github.magisk317.workbuddymonitor.WbWidget.renderAllFromCache(a);
                     }
                 });
             }
